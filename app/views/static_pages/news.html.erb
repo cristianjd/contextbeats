@@ -1,0 +1,11 @@
+<h1>News</h1>
+
+<% @posts.each do |post| %>
+    <h4><%= post.title %></h4>
+    <p class="time"><%=  post.created_at.to_date().to_formatted_s(:long_ordinal) %></p>
+    <p><%= post.content %></p>
+    <br/>
+    <br/>
+<% end %>
+
+<br />

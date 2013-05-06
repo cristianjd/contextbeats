@@ -1,0 +1,80 @@
+<h1>Contact</h1>
+
+<p style="text-align: center;">Use the form below to contact Context. If inquiring about a beat, please include its name</p>
+
+<%= form_for @message, :html => {:class => 'form-horizontal', :id => 'contact_form'}, :validate => true, :remote => true, :url => contact_path do |form| %>
+
+    <div><h4 id="errors"></h4></div>
+    <br/>
+    <fieldset>
+      <div class="control-group">
+        <%= form.label :name, :class => 'control-label'%>
+        <div class="controls">
+            <%= form.text_field :name, :placeholder => "Type in your name...", :class => 'input-xxlarge' %>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <%= form.label :email, :class => 'control-label' %>
+        <div class="controls">
+            <%= form.text_field :email, :placeholder => "Type in your email address...", :class => 'input-xxlarge' %>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <%= form.label :subject, :class => 'control-label' %>
+        <div class="controls">
+            <%= form.text_field :subject, :placeholder => "Type in the subject of your message...", :class => 'input-xxlarge' %>
+         </div>
+      </div>
+
+      <div class="control-group">
+        <%= form.label "Message", :class => 'control-label' %>
+        <div class="controls">
+            <%= form.text_area :body, :rows => 10, :placeholder => "Type in your message...", :class => 'input-xxlarge' %>
+        </div>
+      </div>
+
+      <div class="form-actions">
+        <%= form.submit "Send", class: "btn btn-primary", id: "contact_submit" %>
+      </div>
+    </fieldset>
+<% end %>
+
+<script>
+    function IsEmail(email) {
+        var regex = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+        return regex.test(email);
+    }
+    $("#contact_submit").click(function(){
+     if ($("#message_name").val() == "") {
+         $("#errors").html("Name can not be blank.");
+     }
+     else if ($("#message_email").val() == ""){
+        $("#errors").html("Email can not be blank.");
+     }
+     else if (!IsEmail($("#message_email").val())){
+        $("#errors").html("Invalid email.");
+     }
+     else if ($("#message_subject").val() == ""){
+        $("#errors").html("Subject can not be blank.");
+     }
+     else if ($("#message_body").val() == ""){
+        $("#errors").html("Message can not be blank.");
+     }
+     else {
+        $("#contact_form").submit(function(){
+            $(this).on("ajax:beforeSend", function(){
+                $("#errors").html("Sending message...");
+            });
+            $(this).on("ajax:complete", function(){
+                $("#errors").html("Message sent!");
+                $("#message_body").val("");
+                $("#message_subject").val("");
+                $("#message_email").val("");
+                $("#message_name").val("");
+            });
+        });
+     }
+   });
+</script>
