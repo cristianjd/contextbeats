@@ -80,11 +80,11 @@
 }
 
 .sc-player .sc-controls a.sc-pause {
-  background: url(image_path('play.png'));
+  background: url(image_path('pause.png'));
 }
 
 .sc-player .sc-controls a.sc-pause:hover{
-  background: url(image_path('play-hover.png'));
+  background: url(image_path('pause-hover.png'));
 }
 
 .sc-player.playing .sc-controls a.sc-pause{
@@ -97,7 +97,7 @@
 
 .sc-scrubber .sc-time-indicators{
   background: transparent;
-  color: #08C;
+  color: #a0a0a0;
   padding: 4px;
   font-size:  16px;;
 }
@@ -106,7 +106,7 @@
 
 .sc-player ol.sc-trackslist li {
   background: transparent;
-  color: #a0a0a0; /* number and time */
+  color: #fff; /* number and time */
   -webkit-transition: background 0.3s ease-in;
 }
 
