@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery-migrate-min
 //= require jquery_ujs
+//= require jquery.ui.all
 //= require soundcloud.player.api.js
 //= require sc-player.js
 //= require custom.js

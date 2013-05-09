@@ -1,6 +1,6 @@
-<h1>Contact</h1>
+<!--<h1>Contact</h1>-->
 
-<p style="text-align: center;">Use the form below to contact Context. If inquiring about a beat, please include its name</p>
+<p>Use the form below to contact Context. If inquiring about a beat, please include its name</p>
 
 <%= form_for @message, :html => {:class => 'form-horizontal', :id => 'contact_form'}, :validate => true, :remote => true, :url => contact_path do |form| %>
 
@@ -47,6 +47,7 @@
         return regex.test(email);
     }
     $("#contact_submit").click(function(){
+     $("#errors").fadeOut(400, function(){
      if ($("#message_name").val() == "") {
          $("#errors").html("Name can not be blank.");
      }
@@ -76,5 +77,7 @@
             });
         });
      }
+     });
+     $("#errors").fadeIn(400);
    });
 </script>

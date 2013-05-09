@@ -90,8 +90,7 @@ p {
 }
 
 #menu {
-  font-size:  3em;
-  color:  white;
+  font-size:  2em;
   height: 80px;
   float: left;
   margin-left: 50px;
@@ -102,53 +101,53 @@ p {
 
 #menu ul {
   bottom: 0px;
+  margin-left: 14px;
   padding-bottom: 0px;
+  margin-bottom: 0px;
   vertical-align: bottom;
+  display: inline-block;
+  height: 80px;
 }
 
 #menu li {
-  padding: 0px;
+  padding-top: 50px;
   margin-right: 60px;
-  padding-bottom: 0px;
-  bottom: 0px;
-  vertical-align: bottom;
-  margin-top: 40px;
-}
-
-.nav-pills {
-  height: 80px;
   margin-bottom: 0px;
-  bottom: 0px;
   padding-bottom: 0px;
+  bottom: 0px;
+  display: table-cell;
   vertical-align: bottom;
+  color: $gray-color;
+  display: inline-block;
+  height: 80px;
 }
 
 #menu li a {
   padding-bottom: 0px;
   bottom: 0px;
+  margin-bottom: 0px;
   border-radius:  0px;
+  display: table-cell;
   vertical-align: bottom;
+  color: $gray-color;
 }
 
 #menu li a:hover {
   color: white;
   background-color: transparent;
+  text-decoration: none;
 }
 
-.active {
+.hovernav a{
   color:  white;
 }
 
 #links {
   height: 66px;
+  margin-top: -12px;
   margin-bottom: 0px;
   padding-bottom: 0px;
 }
-
-li #links img {
-}
-
-
 
 /* footer */
 
@@ -200,8 +199,17 @@ footer ul li {
 
 #errors {
   color: $gray-color;
-  text-align: center;
 }
+
+.control-group {
+  margin-left: -100px;
+}
+
+.btn-primary {
+  margin-left: -100px;
+  margin-top: -24px;
+}
+
 
 /* Time */
 .time {
