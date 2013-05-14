@@ -12,7 +12,7 @@ $(document).ready(function(){
         });
         $("#content").fadeOut(200, function(){
             $("#content").load($navnew.attr("href"), function(){
-                $("#content").fadeIn(1500, function(){
+                $("#content").fadeIn(1000, function(){
                 });
             });
         });
@@ -27,3 +27,13 @@ $(document).ready(function(){
             $(this).attr("src", src);
         });
 });
+
+$(document).on('onPlayerTrackSwitch.scPlayer', function(event, track){
+    $('#music-info').fadeOut(400, function(){
+        $('#music-info h3').html(track.title);
+        $('#music-info p:nth-child(2)').html('<span class="info-label">Tempo: </span>' + (track.bpm || "No Tempo") + " BPM");
+        $('#music-info p:nth-child(3)').html('<span class="info-label">Key: </span>' + (track.key_signature || "No Key"));
+        $('#music-info p:last-child').html('<span class="info-label">Description: </span>' + (track.description || "No Description"));
+    });
+    $('#music-info').fadeIn(400);
+})

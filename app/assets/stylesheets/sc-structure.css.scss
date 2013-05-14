@@ -86,14 +86,12 @@
   height: 30px;
   margin: 5px;
   position: relative;
-  display: none;
 }
 
 .sc-scrubber .sc-buffer, .sc-scrubber .sc-played{
   height: 30px;
   position: absolute;
   top: 0;
-  display: none;
 }
 
 .sc-scrubber .sc-time-indicators{
@@ -150,17 +148,17 @@
 .sc-player .sc-info{
   position: absolute;
   top: 10px;
-  left: -5000px;
   width : 400px;
   padding: 5px;
   height: 200px;
   z-index: 500;
-  margin-left: -200px;
+  display: none;
 }
 
 .sc-player .sc-info.active{
   left: 50%;
   top: 12%;
+  display: none;
 }
 
 
@@ -172,13 +170,15 @@
 }
 
 .sc-player .sc-info-toggle.active{
-  left: -5000px;
+  left: 0px;
+  display: none;
 }
 
 .sc-player .sc-info-close{
   position: absolute;
   top: 10px;
   right: 20px;
+  display: none;
 }
 
 /* utilities */
