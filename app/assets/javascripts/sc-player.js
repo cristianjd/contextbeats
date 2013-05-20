@@ -149,7 +149,7 @@
         },
         seek: function(relative){
           player.currentTime = player.duration * relative;
-          player.play();
+          /*player.play();*/
         },
         getDuration: function() {
           return player.duration * 1000;

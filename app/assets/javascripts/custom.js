@@ -29,11 +29,12 @@ $(document).ready(function(){
 });
 
 $(document).on('onPlayerTrackSwitch.scPlayer', function(event, track){
-    $('#music-info').fadeOut(400, function(){
+    var $track_info = $('#music-info, .sc-time-span, .sc-time-indicators')
+   $track_info.fadeOut(400, function(){
         $('#music-info h3').html(track.title);
         $('#music-info p:nth-child(2)').html('<span class="info-label">Tempo: </span>' + (track.bpm || "No Tempo") + " BPM");
         $('#music-info p:nth-child(3)').html('<span class="info-label">Key: </span>' + (track.key_signature || "No Key"));
-        $('#music-info p:last-child').html('<span class="info-label">Description: </span>' + (track.description || "No Description"));
+        $('#music-info p:nth-child(4)').html('<span class="info-label">Description: </span>' + (track.description || "No Description"));
     });
-    $('#music-info').fadeIn(400);
-})
+    $track_info.fadeIn(400);
+});
