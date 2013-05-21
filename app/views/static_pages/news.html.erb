@@ -9,9 +9,9 @@
 <% end %>
 
 <br />
-
 <script>
-        $(window).load(function(){
-            $("#content").mCustomScrollbar();
-        });
+    $("#content").mCustomScrollbar({
+        scrollInertia: 200,
+        advanced: {updateOnContentResize: true}
+    });
 </script>

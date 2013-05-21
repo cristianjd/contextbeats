@@ -38,3 +38,9 @@ $(document).on('onPlayerTrackSwitch.scPlayer', function(event, track){
     });
     $track_info.fadeIn(400);
 });
+
+$(window).load(function(){
+    $(".sc-trackslist").mCustomScrollbar({
+        scrollInertia: 200
+    });
+});
