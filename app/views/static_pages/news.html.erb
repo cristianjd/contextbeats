@@ -2,7 +2,7 @@
 
 <% @posts.each do |post| %>
     <h4><%= post.title %></h4>
-    <p class="time"><%=  post.created_at.to_date().to_formatted_s(:long_ordinal) %></p>
+    <p class="time"><%=  post.created_at.strftime("%B %d %Y, %I:%M %p") %></p>
     <p><%= post.content %></p>
     <br/>
     <br/>

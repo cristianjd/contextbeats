@@ -81,11 +81,11 @@
 }
 
 .sc-player .sc-controls a:hover {
-  background: url(image_path('play-hover.png'));
+  background: url(image_path('play.png'));
 }
 
 .sc-player .sc-controls a.sc-pause {
-  background: url(image_path('pause.png'));
+  background: url(image_path('pause-hover.png'));
 }
 
 .sc-player .sc-controls a.sc-pause:hover{
@@ -97,7 +97,7 @@
 }
 
 .sc-player.playing .sc-controls a.sc-pause:hover{
-  background: url(image_path('pause.png'));
+  background: url(image_path('pause-hover.png'));
 }
 
 .sc-scrubber .sc-time-indicators{
@@ -113,6 +113,7 @@
   background: transparent;
   color: #fff; /* number and time */
   -webkit-transition: background 0.3s ease-in;
+  transition: background 0.5s ease-in;
 }
 
 .sc-player ol.sc-trackslist li:hover {

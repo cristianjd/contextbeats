@@ -155,34 +155,12 @@ p {
 
 /* footer */
 
-footer {
+/*footer {
   margin-top: 45px;
   padding-top: 5px;
-  border-top: 1px solid #eaeaea;
   color: $gray-color;
-}
-
-footer a {
-  color: #555;
-}  
-
-footer a:hover { 
-  color: #222;
-}
-
-footer small {
-  float: left;
-}
-
-footer ul {
-  float: right;
-  list-style: none;
-}
-
-footer ul li {
-  float: left;
-  margin-left: 10px;
-}
+  margin-left: auto;
+}*/
 
 /* content */
 #content {
@@ -258,8 +236,8 @@ footer ul li {
 
 #vol_img {
   position: absolute;
-  margin-top: -450px;
-  margin-left: 128px;
+  margin-top: -452px;
+  margin-left: 107px;
 }
 
 a:hover, a:focus {
@@ -268,4 +246,32 @@ a:hover, a:focus {
 
 a:focus {
   outline: none;
+}
+
+#contact_submit {
+  background:none!important;
+  border:none;
+  padding:0!important;
+  color: $blue-color;
+  font-size: 2em;
+  margin-left: 150px;
+  margin-top: -30px;
+}
+
+.input-xxlarge, #message_name, #message_email, #message_subject {
+  border-radius: 0px;
+}
+
+#music-info ul {
+  padding-left: 0px;
+  margin-left: 0px;
+}
+
+#music-info li {
+  display: inline-block;
+}
+
+#music-info li:first-child {
+  display: inline-block;
+  width: 204px;
 }

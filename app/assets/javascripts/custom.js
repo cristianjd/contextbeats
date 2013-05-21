@@ -30,11 +30,19 @@ $(document).ready(function(){
 
 $(document).on('onPlayerTrackSwitch.scPlayer', function(event, track){
     var $track_info = $('#music-info, .sc-time-span, .sc-time-indicators')
-   $track_info.fadeOut(400, function(){
+    var $track_key = track.key_signature;
+    if ($track_key === "") {
+        $track_key = "No Key";
+    }
+    else if ($track_key.search("m") === -1){
+        $track_key = $track_key + " Major";
+    }
+    else {
+        $track_key = $track_key.replace("m", " Minor");
+    }
+    $track_info.fadeOut(400, function(){
         $('#music-info h3').html(track.title);
-        $('#music-info p:nth-child(2)').html('<span class="info-label">Tempo: </span>' + (track.bpm || "No Tempo") + " BPM");
-        $('#music-info p:nth-child(3)').html('<span class="info-label">Key: </span>' + (track.key_signature || "No Key"));
-        $('#music-info p:nth-child(4)').html('<span class="info-label">Description: </span>' + (track.description || "No Description"));
+        $('#music-info ul').html("<li>" + (track.bpm || "No Tempo") + " BPM</li><li>" + ($track_key || "No Key") + "</li>");
     });
     $track_info.fadeIn(400);
 });

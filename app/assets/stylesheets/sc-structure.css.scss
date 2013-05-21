@@ -45,7 +45,7 @@
   width: 50px;
   height: 50px;
   top: 0%;
-  left: 4%;
+  left: 0%;
 }
 
 .sc-player .sc-controls a{
@@ -96,14 +96,14 @@
 
 .sc-scrubber .sc-time-indicators{
   position: absolute;
-  top: 462px;
-  left:  30px;
+  top: 456px;
+  left:  20px;
 }
 
 /* volume control */
 .sc-volume-slider {
-  top: 10px;
-  left: -20px;
+  top: 8px;
+  left: -40px;
   position: absolute;
   width: 160px;
   height: 16px;
