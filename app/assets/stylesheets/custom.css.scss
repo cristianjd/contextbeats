@@ -6,13 +6,20 @@ $main-color: #272727;
 
 /* universal */
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
 html {
+  height: 100%;
 }
 
 body {
-	padding-top: 30px;
+    /*padding-top: 30px;*/
     color:  white;
     background-color: $main-color;
+    height: 100%;
 }
 
 section {
@@ -33,7 +40,10 @@ textarea {
 
 #container {
   width: 1300px;
-  height: 600px;
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -20px;
 }
 
 /*div {
@@ -71,7 +81,7 @@ p {
 /* header */
 
 #navigation {
-  margin-top: 0px;
+  margin-top: 30px;
   margin-bottom: 20px;
   height: 80px;
   float: left;
@@ -150,17 +160,31 @@ p {
   height: 66px;
   margin-top: -12px;
   margin-bottom: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
   padding-bottom: 0px;
+}
+
+#menu li:nth-child(4) {
+  margin-left: 196px;
+  margin-right: 0px;
 }
 
 /* footer */
 
-/*footer {
-  margin-top: 45px;
-  padding-top: 5px;
+footer, .push {
+  clear: both;
+  height: 20px;
+}
+
+footer small {
+  text-align: center;
   color: $gray-color;
   margin-left: auto;
-}*/
+  margin-right: auto;
+  display: block;
+  font-size: 0.75em;
+}
 
 /* content */
 #content {
