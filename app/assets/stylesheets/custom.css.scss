@@ -205,10 +205,13 @@ footer small {
 
 #errors {
   color: $gray-color;
+  margin-left: 336px;
+  margin-bottom: 0px;
+  height: 18px;
 }
 
 .control-group {
-  margin-left: -100px;
+  margin-left: auto;
 }
 
 .btn-primary {
@@ -278,7 +281,7 @@ a:focus {
   padding:0!important;
   color: $blue-color;
   font-size: 2em;
-  margin-left: 150px;
+  margin-left: 240px;
   margin-top: -30px;
 }
 
@@ -298,4 +301,8 @@ a:focus {
 #music-info li:first-child {
   display: inline-block;
   width: 204px;
+}
+
+#contact_par {
+  margin-left: 100px;
 }
