@@ -65,5 +65,8 @@ module Context
       authentication: :plain,
       enable_starttls_auto: true
     }
+
+    #fonts to asset path
+    config.assets.paths << Rails.root.join("app", "assets", "fonts")
   end
 end
