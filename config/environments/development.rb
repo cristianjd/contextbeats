@@ -39,9 +39,11 @@ Context::Application.configure do
   config.paperclip_defaults = {
       :storage => :s3,
       :s3_credentials => {
-          :bucket => ENV['AWS_BUCKET'],
-          :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
-          :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
-      }
+          :bucket => 'contextbeats',
+          :access_key_id => 'AKIAJCQQCDMJ2MAMR6AQ',
+          :secret_access_key => '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'
+      },
+      :path => ":class/:id/:basename_:style.:extension",
+      :url => ":s3_ncal_url"
   }
 end
