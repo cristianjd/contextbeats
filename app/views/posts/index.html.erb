@@ -3,11 +3,7 @@
 <%= link_to 'New Post', new_post_path %><br />
 
 <% @posts.each do |post| %>
-    <%= image_tag post.picture.url(:medium) %>
-    <h4><%= post.title %></h4>
-    <p class="time"><%=  post.created_at.to_date().to_formatted_s(:long_ordinal) %></p>
-    <p><%= post.content %></p>
+    <%= render 'onepost', :post => post %>
     <p><%= link_to 'Show', post %> <%= link_to 'Edit', edit_post_path(post) %> <%= link_to 'Destroy', post, confirm: 'Are you sure?', method: :delete %></p>
-    <br/>
     <br/>
 <% end %>

@@ -1,10 +1,7 @@
 <!--<h1>News</h1>-->
 
 <% @posts.each do |post| %>
-    <h4><%= post.title %></h4>
-    <p class="time"><%=  post.created_at.strftime("%B %d %Y, %I:%M %p") %></p>
-    <p><%= post.content %></p>
-    <br/>
+    <%= render 'posts/onepost', :post => post %>
     <br/>
 <% end %>
 

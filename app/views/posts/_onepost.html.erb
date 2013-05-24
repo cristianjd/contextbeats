@@ -1,0 +1,5 @@
+<%= image_tag(post.picture.url(:medium), :class => "post_pic") if post.picture? %>
+<h4><%= post.title %></h4>
+<p class="time"><%=  post.created_at.strftime("%B %d %Y, %I:%M %p") %></p>
+<p><%= raw(post.content) %></p>
+<br/>
