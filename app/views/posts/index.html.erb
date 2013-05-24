@@ -1,6 +1,9 @@
 <h1>Listing posts</h1>
 
+<%= link_to 'New Post', new_post_path %><br />
+
 <% @posts.each do |post| %>
+    <%= image_tag post.picture.url(:medium) %>
     <h4><%= post.title %></h4>
     <p class="time"><%=  post.created_at.to_date().to_formatted_s(:long_ordinal) %></p>
     <p><%= post.content %></p>
@@ -8,7 +11,3 @@
     <br/>
     <br/>
 <% end %>
-
-<br />
-
-<%= link_to 'New Post', new_post_path %>
