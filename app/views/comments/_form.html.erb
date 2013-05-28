@@ -1,4 +1,4 @@
-<%= form_for([@post, @post.comments.build], :html => {:class => "form-inline", :id => "comment_form"}) do |f| %>
+<%= form_for([@post, @post.comments.build], :html => {:class => "form-inline", :id => "comment_form"}, :validate => true, :remote => true) do |f| %>
     <fieldset id="comment_fieldset">
     <div class="control-group">
       <!--<%= f.label :commenter, :class => 'control-label' %><br />-->
@@ -17,3 +17,39 @@
     </div>
     </fieldset>
 <% end %>
+
+<div><h4 id="errors_2"></h4></div>
+
+<script>
+    function IsNotBlank(field) {
+        if ($(field).val() == "") {
+            return false;
+        } else if ($(field).val() != "") {
+            return true;
+        }
+    }
+
+    $("#comment_submit").click(function(event){
+        event.preventDefault();
+        $("#errors_2").fadeOut(400, function(){
+            if (!IsNotBlank("#comment_commenter")) {
+                $("#errors_2").html("Name can not be blank.");
+            }
+            else if (!IsNotBlank("#comment_body")){
+                $("#errors_2").html("Comment can not be blank.");
+            }
+            else {
+                $("#errors_2").html("");
+                $("#comment_form").submit(function(){
+                    $(this).on("ajax:complete", function(){
+                        $("#comment_body").val("");
+                        $("#comment_commenter").val("");
+                    });
+                });
+                $("#comment_form").submit();
+            }
+        });
+        $("#errors_2").fadeIn(400);
+    });
+
+</script>
