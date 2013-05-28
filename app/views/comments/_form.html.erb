@@ -1,13 +1,19 @@
-<%= form_for([@post, @post.comments.build]) do |f| %>
-    <div class="field">
-      <%= f.label :commenter %><br />
-      <%= f.text_field :commenter %>
+<%= form_for([@post, @post.comments.build], :html => {:class => "form-inline", :id => "comment_form"}) do |f| %>
+    <fieldset id="comment_fieldset">
+    <div class="control-group">
+      <!--<%= f.label :commenter, :class => 'control-label' %><br />-->
+      <div class="controls">
+      <%= f.text_field :commenter, :placeholder => "Name...", :class => 'input-medium' %>
+      </div>
     </div>
-    <div class="field">
-      <%= f.label :body %><br />
-      <%= f.text_area :body %>
+    <div class="control-group">
+      <!--<%= f.label :body, :class => 'control-label' %><br />-->
+      <div class="controls">
+      <%= f.text_field :body, :placeholder => "Comment...", :class => 'input-xlarge' %>
+      </div>
     </div>
-    <div class="actions">
-      <%= f.submit %>
+    <div class="form-actions" id="comment_div">
+      <%= f.submit "Submit", id: "comment_submit"%>
     </div>
+    </fieldset>
 <% end %>
