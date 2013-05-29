@@ -212,7 +212,7 @@ footer small {
   height: 18px;
 }
 
-#errors_2 {
+.errors_2 {
   color: $gray-color;
   height: 18px;
   margin-top: -34px;
@@ -294,7 +294,7 @@ a:focus {
   margin-top: -30px;
 }
 
-.input-xxlarge, #message_name, #message_email, #message_subject, #comment_commenter, #comment_body, .input-medium {
+.input-xxlarge, #message_name, #message_email, #message_subject, .comment_fieldset .comment_commenter, .comment_fieldset .comment_body, .input-medium, .input-xlarge {
   border-radius: 0px;
 }
 
@@ -341,15 +341,15 @@ form.form-inline div.control-group div.controls {
   display: inline-block;
 }
 
-#comment_submit {
+.comment_submit {
   display: inline-block;
 }
 
-#comment_div {
+.comment_div {
   display: inline-block;
 }
 
-#comment_submit {
+.comment_submit {
   background:none!important;
   border:none;
   padding:0!important;
@@ -357,11 +357,11 @@ form.form-inline div.control-group div.controls {
   font-size: 1em;
 }
 
-#comment_fieldset {
+.comment_fieldset {
   margin-top: -28px;
 }
 
-#comment_body {
+.comment_body {
   margin-left: 24px;
 }
 

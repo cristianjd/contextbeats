@@ -1,2 +1,3 @@
-$('#comment_wrap').append("<%= escape_javascript(render(:partial => @comment ))%>");
-$('#comment_count').html("<%= @post.comments.count %>");
+var postid = "#" + 'post-' + <%= escape_javascript(@post.id.to_s()) %> + ' ';
+$(postid+'.comment_wrap').append("<%= escape_javascript(render(:partial => @comment ))%>");
+$(postid+'.comment_count').html("<%= @post.comments.count %>");

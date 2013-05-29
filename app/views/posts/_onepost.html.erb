@@ -2,3 +2,16 @@
 <h4><%= post.title %></h4>
 <p class="time"><%=  post.created_at.strftime("%B %d %Y, %I:%M %p") %></p>
 <p><%= raw(post.content) %></p>
+
+<% postid = "post-#{post.id}" %>
+
+<div id="<%= postid %>">
+  <a href="#" class="comment_link"><h6>Comments (<span class="comment_count"><%= post.comments.count %></span>)</h6></a>
+  <div class="comment_container" style="display: none;">
+    <div class="comment_wrap"><%= render post.comments %></div>
+
+    <h6>Add a comment:</h6>
+    <%= render "comments/form", :post => post %>
+  </div>
+</div>
+<br/>
