@@ -1,5 +1,5 @@
 <p class="comments">
-  <span class="comment_name"><%= comment.commenter %></span> said: <span class="comment_body"><%= comment.body %></span> on <span class="comment_date"><%=  comment.created_at.strftime("%B %d %Y, %I:%M %p") %></span>.
+  <span class="comment_name"><%= comment.commenter %></span> said: "<span class="comment_body"><%= comment.body %></span>" on <span class="comment_date"><%=  comment.created_at.strftime("%B %d %Y, %I:%M %p") %></span>.
   <%= link_to 'X', [comment.post, comment],
               :confirm => 'Are you sure?',
               :method => :delete %>

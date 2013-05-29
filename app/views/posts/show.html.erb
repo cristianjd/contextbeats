@@ -4,13 +4,52 @@
 
 <%= render 'onepost', :post => post %>
 
-<h6>Comments (<%= post.comments.count %>)</h6>
-<%= render @post.comments %>
+<a href="#" id="comment_link"><h6>Comments (<span id="comment_count"><%= post.comments.count %></span>)</h6></a>
+<div id="comment_container" style="display: none;"><div id="comment_wrap"><%= render @post.comments %></div>
 
 <h6>Add a comment:</h6>
-<%= render "comments/form", :post => post %>
+<%= render "comments/form", :post => post %></div>
 
 <br/>
 
 <%= link_to 'Edit', edit_post_path(@post) %> |
 <%= link_to 'Back', posts_path %> |
+
+<script>
+    function IsNotBlank(field) {
+        if ($(field).val() == "") {
+            return false;
+        } else if ($(field).val() != "") {
+            return true;
+        }
+    }
+
+    $("#comment_submit").click(function(event){
+        event.preventDefault();
+        $("#errors_2").fadeOut(400, function(){
+            if (!IsNotBlank("#comment_commenter")) {
+                $("#errors_2").html("Name can not be blank.");
+            }
+            else if (!IsNotBlank("#comment_body")){
+                $("#errors_2").html("Comment can not be blank.");
+            }
+            else {
+                $("#errors_2").html("");
+                $("#comment_form").submit(function(){
+                    $(this).on("ajax:complete", function(){
+                        $("#comment_body").val("");
+                        $("#comment_commenter").val("");
+                    });
+                });
+                $("#comment_form").submit();
+            }
+        });
+        $("#errors_2").fadeIn(400);
+    });
+
+    $('#comment_link').click(function(event){
+        event.preventDefault();
+        $('#comment_container').slideToggle(600);
+    });
+
+</script>
