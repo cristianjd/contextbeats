@@ -7,13 +7,6 @@
 					<li><%= link_to "News", news_path %></li>
 					<li><%= link_to "About", about_path %></li>
 					<li><%= link_to "Contact", contact_path %></li>
-                    <li>
-                      <div id="links">
-                        <a href="http://soundcloud.com/contextbeats" target="_blank"><%= image_tag "sc-blue.png" %></a>
-                        <a href="http://www.facebook.com/contextbeats" target="_blank"><%= image_tag "fb-blue.png" %></a>
-                        <a href="http://www.youtube.com/contextbeats" target="_blank"><%= image_tag "yt-blue.png" %></a>
-                      </div>
-                    </li>
 				</ul>
 			</nav>
 		</div>
@@ -21,4 +14,9 @@
             <a href="http://soundcloud.com/contextbeats/sets/beats" class="sc-player"></a>
             <%= image_tag "volume.png", :id => "vol_img" %>
             <div id="music-info"><h3></h3><ul></ul></div>
+          <div id="links">
+            <a href="http://soundcloud.com/contextbeats" target="_blank"><%= image_tag "sc-blue.png" %></a>
+            <a href="http://www.facebook.com/contextbeats" target="_blank"><%= image_tag "fb-blue.png" %></a>
+            <a href="http://www.youtube.com/contextbeats" target="_blank"><%= image_tag "yt-blue.png" %></a>
+          </div>
         </div>

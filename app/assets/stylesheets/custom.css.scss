@@ -39,7 +39,7 @@ textarea {
 }
 
 #container {
-  width: 1300px;
+  width: 1024px;
   min-height: 100%;
   height: auto !important;
   height: 100%;
@@ -85,11 +85,12 @@ p {
   margin-bottom: 20px;
   height: 80px;
   float: left;
+  padding-left: 0px;
 }
 
 #logo {
 	float: left;
-	margin-right: 10px;
+	margin-right: 0px;
     margin-bottom: 40px;
 	font-size: 5em;
     letter-spacing: 0px;
@@ -158,17 +159,11 @@ p {
 }
 
 #links {
-  height: 66px;
-  margin-top: -12px;
-  margin-bottom: 0px;
-  margin-left: 0px;
-  margin-right: 0px;
+  height: 50px;
   padding-bottom: 0px;
-}
-
-#menu li:nth-child(4) {
-  margin-left: 196px;
-  margin-right: 0px;
+  width: 140px;
+  margin-top: 30px;
+  margin-left: 88px;
 }
 
 /* footer */
@@ -191,9 +186,9 @@ footer small {
 #content {
   margin-top: 20px;
   margin-left: 120px;
-  width: 820px;
+  width: 554px;
   float: left;
-  max-height: 650px;
+  max-height: 592px;
   overflow-y: auto;
 
 }
@@ -248,8 +243,8 @@ footer small {
 #music {
   margin-top: 4px;
   width: 320px;
-  height: 660px;
-  margin-left: 30px;
+  height: 592px;
+  margin-left: 0px;
   float: left;
 }
 
