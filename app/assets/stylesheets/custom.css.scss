@@ -185,7 +185,7 @@ footer small {
 /* content */
 #content {
   margin-top: 20px;
-  margin-left: 120px;
+  margin-left: 70px;
   width: 554px;
   float: left;
   max-height: 592px;
@@ -201,8 +201,7 @@ footer small {
 
 #errors {
   color: $gray-color;
-  margin-left: 66px;
-  text-align: center;
+  margin-left: 0px;
   margin-bottom: 0px;
   height: 18px;
 }
@@ -215,7 +214,11 @@ footer small {
 }
 
 .control-group {
-  margin-left: auto;
+  margin-left: 0px;
+}
+
+.controls {
+  margin-left: 0px;
 }
 
 .btn-primary {
@@ -242,7 +245,7 @@ footer small {
 /* Music */
 #music {
   margin-top: 4px;
-  width: 320px;
+  width: 370px;
   height: 592px;
   margin-left: 0px;
   float: left;
@@ -285,7 +288,7 @@ a:focus {
   padding:0!important;
   color: $blue-color;
   font-size: 2em;
-  margin-left: 240px;
+  margin-left: 60px;
   margin-top: -30px;
 }
 
@@ -308,7 +311,7 @@ a:focus {
 }
 
 #contact_par {
-  margin-left: 100px;
+  margin-left: 0px;
 }
 
 .post_pic {
@@ -358,4 +361,8 @@ form.form-inline div.control-group div.controls {
 
 .comment_body {
   margin-left: 24px;
+}
+
+#message_name, #message_email, #message_subject, #message_body {
+  margin-left: -180px;
 }
