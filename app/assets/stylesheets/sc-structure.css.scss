@@ -88,6 +88,7 @@
   height: 24px;
   width: 320px;
   cursor: pointer;
+  display: none;
 }
 
 .sc-scrubber .sc-buffer, .sc-scrubber .sc-played{
@@ -98,6 +99,7 @@
   position: absolute;
   top: 456px;
   left:  20px;
+  display: none;
 }
 
 /* volume control */
@@ -130,7 +132,7 @@
   height: 75%;
   left: 0;
   overflow: auto;
-  overflow-y: auto;
+  overflow-y: hidden;
   margin-top: 60px;
   list-style-type: none;
 }

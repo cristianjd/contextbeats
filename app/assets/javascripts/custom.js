@@ -34,6 +34,8 @@ $(document).ready(function(){
         });
 });
 
+var $track_name = "";
+
 $(document).on('onPlayerTrackSwitch.scPlayer', function(event, track){
     var $track_info = $('#music-info, .sc-time-span, .sc-time-indicators')
     var $track_key = track.key_signature;
@@ -46,11 +48,14 @@ $(document).on('onPlayerTrackSwitch.scPlayer', function(event, track){
     else {
         $track_key = $track_key.replace("m", " Minor");
     }
-    $track_info.fadeOut(400, function(){
-        $('#music-info h3').html(track.title);
-        $('#music-info ul').html("<li>" + (track.bpm || "No Tempo") + " BPM</li><li>" + ($track_key || "No Key") + "</li>");
-    });
-    $track_info.fadeIn(400);
+    if ($track_name !== track.title) {
+        $track_info.fadeOut(400, function(){
+            $('#music-info h3').html(track.title);
+            $('#music-info ul').html("<li>" + (track.bpm || "No Tempo") + " BPM</li><li>" + ($track_key || "No Key") + "</li>");
+        });
+        $track_info.fadeIn(400);
+    }
+    $track_name = track.title;
 });
 
 $(window).load(function(){
