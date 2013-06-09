@@ -1,6 +1,12 @@
-<p class="comments">
+<% commentid = "comment-#{comment.id}" %>
+
+<p class="comments" id="<%= commentid %>">
   <span class="comment_name"><%= comment.commenter %></span> said: "<span class="comment_text"><%= comment.body %></span>" on <span class="comment_date"><%=  comment.created_at.strftime("%B %d %Y, %I:%M %p") %></span>.
-  <!--<%= link_to 'X', [comment.post, comment],
+  <% if signed_in? %>
+      <%= link_to 'X', [comment.post, comment],
+              :remote => true,
               :confirm => 'Are you sure?',
-              :method => :delete %>-->
+              :method => :delete %>
+  <% end %>
+
 </p>

@@ -1,5 +1,4 @@
 class CommentsController < ApplicationController
-  http_basic_authenticate_with name: "context", password: "contextbeats00", :only => :destroy
 
   def create
     @post = Post.find(params[:post_id])
@@ -14,8 +13,12 @@ class CommentsController < ApplicationController
   def destroy
     @post = Post.find(params[:post_id])
     @comment = @post.comments.find(params[:id])
+
+    respond_to do |format|
+      format.js
+    end
     @comment.destroy
-    redirect_to post_path(@post)
+
   end
 
 end

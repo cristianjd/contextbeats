@@ -1,0 +1,5 @@
+var postid = "#" + 'post-' + <%= escape_javascript(@post.id.to_s()) %> + ' ';
+var commentid = "#" + 'comment-' + <%= escape_javascript(@comment.id.to_s()) %> + ' ';
+$(commentid).remove();
+var commentcount = (<%= @post.comments.count %> - 1).toString();
+$(postid+'.comment_count').html(commentcount);
