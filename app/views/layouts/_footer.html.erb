@@ -1,5 +1,12 @@
 <footer>
   <small>
     &copy; 2013 Context
+    <div id="login">
+        <% if signed_in? %>
+         <%= link_to "Sign Out", signout_path, method: "delete" %>
+         <% else %>
+         <%= link_to "", signin_path %>
+         <% end %>
+    </div>
   </small>
 </footer>

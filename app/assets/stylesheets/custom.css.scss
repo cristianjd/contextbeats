@@ -275,7 +275,7 @@ a:focus {
   margin-top: -30px;
 }
 
-.input-xxlarge, #message_name, #message_email, #message_subject, .comment_fieldset .comment_commenter, .comment_fieldset .comment_body, .input-medium, .input-xlarge {
+.input-xxlarge, #message_name, #message_email, #message_subject, .comment_fieldset .comment_commenter, .comment_fieldset .comment_body, .input-medium, .input-xlarge, #session_name, #session_password {
   border-radius: 0px;
 }
 
@@ -355,4 +355,18 @@ form.form-inline div.control-group div.controls {
 
 #message_name, #message_email, #message_subject, #message_body {
   margin-left: -180px;
+}
+
+#signin_submit {
+  background:none!important;
+  border:none;
+  padding:0!important;
+  color: $blue-color;
+  font-size: 1.5em;
+  margin-left: 58px;
+  margin-top: -50px;
+}
+
+#login {
+  display: inline-block;
 }
