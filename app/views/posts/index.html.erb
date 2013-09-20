@@ -1,7 +1,11 @@
-<%= link_to 'New Post', new_post_path %><br /><br />
+<% if signed_in? %>
+<%= link_to 'New Post', new_post_path, remote: true %><br /><br />
+<% end %>
 
 <% @posts.each do |post| %>
     <%= render 'onepost', :post => post %>
-    <p><%= link_to 'Show', post %> <%= link_to 'Edit', edit_post_path(post) %> <%= link_to 'Destroy', post, confirm: 'Are you sure?', method: :delete %></p>
+    <% if signed_in? %>
+    <p><%= link_to 'Show', post, remote: true %> <%= link_to 'Edit', edit_post_path(post), remote: true %> <%= link_to 'Destroy', post, confirm: 'Are you sure?', method: :delete, remote: true %></p>
+    <% end %>
     <br/>
 <% end %>

@@ -14,8 +14,7 @@ Context::Application.routes.draw do
   root :to => 'static_pages#home'
 
   match '/home', to: 'static_pages#home'
-  match '/music', to: 'static_pages#music'
-  match '/news', to: 'static_pages#news'
+  match '/news', to: 'posts#index'
   match '/about', to: 'static_pages#about'
 
   match 'contact' => 'contact#new', :as => 'contact', :via => :get

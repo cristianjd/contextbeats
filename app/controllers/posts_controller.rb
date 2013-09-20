@@ -1,4 +1,5 @@
 class PostsController < ApplicationController
+layout false
 
   # GET /posts
   # GET /posts.json
@@ -7,7 +8,7 @@ class PostsController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @posts }
+      format.js { render js: "loadContent('/posts')" }
     end
   end
 
@@ -18,7 +19,7 @@ class PostsController < ApplicationController
 
     respond_to do |format|
       format.html # show.html.erb
-      format.json { render json: @post }
+      format.js { render js: "loadContent('/posts/#{@post.id}')" }
     end
   end
 
@@ -29,13 +30,18 @@ class PostsController < ApplicationController
 
     respond_to do |format|
       format.html # new.html.erb
-      format.json { render json: @post }
+      #format.json { render json: @post }
+      format.js { render js: "loadContent('/posts/new')" }
     end
   end
 
   # GET /posts/1/edit
   def edit
     @post = Post.find(params[:id])
+    respond_to do |format|
+      format.html
+      format.js { render js: "loadContent('/posts/#{@post.id}/edit')" }
+    end
   end
 
   # POST /posts
@@ -46,10 +52,10 @@ class PostsController < ApplicationController
     respond_to do |format|
       if @post.save
         format.html { redirect_to @post, notice: 'Post was successfully created.' }
-        format.json { render json: @post, status: :created, location: @post }
+        format.js { render js: "loadContent('/posts')" }
       else
         format.html { render action: "new" }
-        format.json { render json: @post.errors, status: :unprocessable_entity }
+        format.js { render js: "loadContent('/posts/new')" }
       end
     end
   end
@@ -62,10 +68,10 @@ class PostsController < ApplicationController
     respond_to do |format|
       if @post.update_attributes(params[:post])
         format.html { redirect_to @post, notice: 'Post was successfully updated.' }
-        format.json { head :no_content }
+        format.js { render js: "loadContent('/posts')" }
       else
         format.html { render action: "edit" }
-        format.json { render json: @post.errors, status: :unprocessable_entity }
+        format.js { render js: "loadContent('/posts/#{post.id}/edit')" }
       end
     end
   end
@@ -78,7 +84,7 @@ class PostsController < ApplicationController
 
     respond_to do |format|
       format.html { redirect_to posts_url }
-      format.json { head :no_content }
+      format.js { render js: "loadContent('/posts')" }
     end
   end
 end

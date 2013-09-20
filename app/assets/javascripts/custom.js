@@ -151,3 +151,16 @@ $(document).on("click", "#contact_submit", function(event){
     });
     $("#errors").fadeIn(400);
 });
+
+function loadContent(url) {
+    $("#content").fadeOut(200, function(){
+        $("#content").load(url, function(){
+            $("#content").mCustomScrollbar({
+                scrollInertia: 200,
+                advanced: {updateOnContentResize: true}
+            });
+            $("#content").fadeIn(1000, function(){
+            });
+        });
+    });
+}
