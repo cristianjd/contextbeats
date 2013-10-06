@@ -14,7 +14,10 @@
 //= require jquery-migrate-min
 //= require jquery_ujs
 //= require jquery.ui.all
+//= require jquery.mCustomScrollbar.concat.min.js
 //= require soundcloud.player.api.js
 //= require sc-player.js
-//= require custom.js
-//= require_tree .
+//= require helpers
+//= require main
+//= require comments
+//= require contact

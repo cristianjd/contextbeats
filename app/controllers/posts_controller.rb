@@ -1,8 +1,6 @@
 class PostsController < ApplicationController
 layout false
 
-  # GET /posts
-  # GET /posts.json
   def index
     @posts = Post.all
 
@@ -12,8 +10,6 @@ layout false
     end
   end
 
-  # GET /posts/1
-  # GET /posts/1.json
   def show
     @post = Post.find(params[:id])
 
@@ -23,19 +19,15 @@ layout false
     end
   end
 
-  # GET /posts/new
-  # GET /posts/new.json
   def new
     @post = Post.new
 
     respond_to do |format|
       format.html # new.html.erb
-      #format.json { render json: @post }
       format.js { render js: "loadContent('/posts/new')" }
     end
   end
 
-  # GET /posts/1/edit
   def edit
     @post = Post.find(params[:id])
     respond_to do |format|
@@ -44,8 +36,6 @@ layout false
     end
   end
 
-  # POST /posts
-  # POST /posts.json
   def create
     @post = Post.new(params[:post])
 
@@ -60,8 +50,6 @@ layout false
     end
   end
 
-  # PUT /posts/1
-  # PUT /posts/1.json
   def update
     @post = Post.find(params[:id])
 
@@ -76,8 +64,6 @@ layout false
     end
   end
 
-  # DELETE /posts/1
-  # DELETE /posts/1.json
   def destroy
     @post = Post.find(params[:id])
     @post.destroy

@@ -9,5 +9,8 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
+ *= require jquery.mCustomScrollbar.css
+ *= require sc-colors.css.scss
+ *= require sc-structure.css.scss
  *= require_tree .
 */
