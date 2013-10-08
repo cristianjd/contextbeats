@@ -16,26 +16,25 @@ html {
 }
 
 body {
-    /*padding-top: 30px;*/
-    color:  white;
-    background-color: $main-color;
-    height: 100%;
+  color:  white;
+  background-color: $main-color;
+  height: 100%;
 }
 
 section {
-	overflow: auto;
+  overflow: auto;
 }
 
 textarea {
-	resize: vertical;
+  resize: vertical;
 }
 
 .center {
-	text-align: center;
+  text-align: center;
 }
 
 .center h1 {
-	margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 #container {
@@ -85,20 +84,19 @@ p {
 }
 
 #logo {
-	float: left;
-	margin-right: 0px;
-    margin-bottom: 40px;
-	font-size: 5em;
-    letter-spacing: 0px;
-	color: #fff;
-	padding-top: 9px;
-	font-family: TrajanProRegular;
-	line-height: 1;
-}
-
-#logo:hover {
-	color: #fff;
-	text-decoration: none;
+  float: left;
+  margin-right: 0px;
+  margin-bottom: 40px;
+  font-size: 5em;
+  letter-spacing: 0px;
+  color: #fff;
+  padding-top: 9px;
+  font-family: TrajanProRegular;
+  line-height: 1;
+  &:hover {
+    color: #fff;
+    text-decoration: none;
+  }
 }
 
 #menu {
@@ -109,46 +107,43 @@ p {
   padding-bottom: 0px;
   margin-bottom: 0px;
   vertical-align: bottom;
+  ul {
+    bottom: 0px;
+    margin-left: 14px;
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+    vertical-align: bottom;
+    display: inline-block;
+    height: 80px;
+  }
+  li {
+    padding-top: 50px;
+    margin-right: 60px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    bottom: 0px;
+    display: table-cell;
+    vertical-align: bottom;
+    color: $gray-color;
+    display: inline-block;
+    height: 80px;
+    a {
+      padding-bottom: 0px;
+      bottom: 0px;
+      margin-bottom: 0px;
+      border-radius:  0px;
+      display: table-cell;
+      vertical-align: bottom;
+      color: $gray-color;
+      &:hover {
+        color: white;
+        background-color: transparent;
+        text-decoration: none;
+      }
+    }
+  }
 }
 
-#menu ul {
-  bottom: 0px;
-  margin-left: 14px;
-  padding-bottom: 0px;
-  margin-bottom: 0px;
-  vertical-align: bottom;
-  display: inline-block;
-  height: 80px;
-}
-
-#menu li {
-  padding-top: 50px;
-  margin-right: 60px;
-  margin-bottom: 0px;
-  padding-bottom: 0px;
-  bottom: 0px;
-  display: table-cell;
-  vertical-align: bottom;
-  color: $gray-color;
-  display: inline-block;
-  height: 80px;
-}
-
-#menu li a {
-  padding-bottom: 0px;
-  bottom: 0px;
-  margin-bottom: 0px;
-  border-radius:  0px;
-  display: table-cell;
-  vertical-align: bottom;
-  color: $gray-color;
-}
-
-#menu li a:hover {
-  color: white;
-  background-color: transparent;
-  text-decoration: none;
-}
 
 .hovernav a{
   color:  white;
@@ -160,6 +155,9 @@ p {
   width: 140px;
   margin-top: 30px;
   margin-left: 88px;
+  a {
+    margin-left: 50px;
+  }
 }
 
 /* footer */
@@ -195,18 +193,35 @@ footer small {
   border: none;
 }
 
+.input-xxlarge, #message_name, #message_email, #message_subject, .comment_fieldset .comment_commenter, .comment_fieldset .comment_body, .input-medium, .input-xlarge, #session_name, #session_password, #post_form input {
+  border-radius: 0px;
+}
+
+a:hover, a:focus {
+  text-decoration: none;
+}
+
+a:focus {
+  outline: none;
+}
+
+/* Contact */
+
+#contact_submit {
+  background:none!important;
+  border:none;
+  padding:0!important;
+  color: $blue-color;
+  font-size: 2em;
+  margin-left: 60px;
+  margin-top: -30px;
+}
+
 #errors {
   color: $gray-color;
   margin-left: 0px;
   margin-bottom: 0px;
   height: 18px;
-}
-
-.errors_2 {
-  color: $gray-color;
-  height: 18px;
-  margin-top: -28px;
-  font-size: 1em;
 }
 
 .control-group {
@@ -222,15 +237,20 @@ footer small {
   margin-top: -24px;
 }
 
-.info-label {
-  color: $gray-color;
+#contact_par {
+  margin-left: 0px;
 }
 
-#music-info p {
-  margin-bottom: 0px;
-  margin-top: 0px;
+form.form-inline div.control-group {
+  display: inline-block;
+  div.controls {
+    display: inline-block;
+  }
 }
 
+#message_name, #message_email, #message_subject, #message_body {
+  margin-left: -180px;
+}
 
 /* Time */
 .time {
@@ -253,54 +273,34 @@ footer small {
   margin-left: 107px;
 }
 
-a:hover, a:focus {
-  text-decoration: none;
-}
-
-a:focus {
-  outline: none;
-}
-
-#contact_submit {
-  background:none!important;
-  border:none;
-  padding:0!important;
-  color: $blue-color;
-  font-size: 2em;
-  margin-left: 60px;
-  margin-top: -30px;
-}
-
-.input-xxlarge, #message_name, #message_email, #message_subject, .comment_fieldset .comment_commenter, .comment_fieldset .comment_body, .input-medium, .input-xlarge, #session_name, #session_password, #post_form input {
-  border-radius: 0px;
+.info-label {
+  color: $gray-color;
 }
 
 #music-info {
   height: 55px;
   display: none;
+  h3 {
+    margin-left: 10px;
+  }
+  ul {
+    padding-left: 0px;
+    margin-left: 10px;
+  }
+  li {
+    display: inline-block;
+    &:first-child {
+      display: inline-block;
+      width: 204px;
+    }
+  }
+  p {
+    margin-bottom: 0px;
+    margin-top: 0px;
+  }
 }
 
-#music-info ul {
-  padding-left: 0px;
-  margin-left: 0px;
-}
-
-#music-info li {
-  display: inline-block;
-}
-
-#music-info li:first-child {
-  display: inline-block;
-  width: 204px;
-}
-
-#contact_par {
-  margin-left: 0px;
-}
-
-.post_pic {
-  margin-left: auto;
-}
+/* Comments */
 
 .comments {
   font-size: 0.75em;
@@ -313,14 +313,6 @@ a:focus {
 .comment_date {
   color: $gray-color;
   font-style: italic;
-}
-
-form.form-inline div.control-group {
-  display: inline-block;
-}
-
-form.form-inline div.control-group div.controls {
-  display: inline-block;
 }
 
 .comment_submit {
@@ -349,9 +341,38 @@ form.form-inline div.control-group div.controls {
   margin-left: 8px;
 }
 
-#message_name, #message_email, #message_subject, #message_body {
-  margin-left: -180px;
+.errors_2 {
+  color: $gray-color;
+  height: 18px;
+  margin-top: -28px;
+  font-size: 1em;
 }
+
+/* News Posts */
+
+#post_form {
+  .controls {
+    margin-left: 0px;
+  }
+  .form_actions {
+    margin-left: 0px;
+    margin-top: 8px;
+  }
+}
+
+#post_form .controls {
+  margin-left: 0px;
+}
+
+#post_submit {
+  margin-top: -10px;
+}
+
+.post_pic {
+  margin-left: auto;
+}
+
+/* Sessions */
 
 #signin_submit {
   background:none!important;
@@ -365,17 +386,4 @@ form.form-inline div.control-group div.controls {
 
 #login {
   display: inline-block;
-}
-
-#post_form .controls {
-  margin-left: 0px;
-}
-
-#post_form .form_actions {
-  margin-left: 0px;
-  margin-top: 8px;
-}
-
-#post_submit {
-  margin-top: -10px;
 }
