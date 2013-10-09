@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby '1.9.3'
+
 gem 'rails', '3.2.1'
 gem 'bootstrap-sass', '2.3.0.1'
 
@@ -22,13 +24,25 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'jquery-rails'
+gem 'jquery-rails', '2.0.2'
 gem 'jquery-ui-rails'
 gem 'jquery-migrate-rails'
-gem 'client_side_validations'
 gem 'paperclip'
 gem 'aws-sdk'
-gem 'bcrypt-ruby'
+gem 'bcrypt-ruby', '~> 3.0.0'
+
+
+group :development, :test do
+  gem 'rspec-rails', '2.11.0'
+  gem 'childprocess', '0.3.9'
+  gem 'spork', '0.9.2'
+end
+
+group :test do
+  gem 'capybara', '1.1.2'
+  gem 'factory_girl_rails', '4.1.0'
+  gem 'database_cleaner', '0.7.0'
+end
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
