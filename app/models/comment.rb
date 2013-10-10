@@ -1,8 +1,8 @@
 class Comment < ActiveRecord::Base
+  attr_accessible :commenter, :body
   belongs_to :post
 
   validates :commenter, :presence => true
   validates :body, :presence => true
-
-  #default_scope order: 'comments.created_at DESC'
+  validates :post_id, :presence => true
 end
