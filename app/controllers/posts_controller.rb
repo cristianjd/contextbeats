@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
 layout false
+before_filter :signed_in_user, :except => :index
 
   def index
     @posts = Post.all
@@ -73,4 +74,10 @@ layout false
       format.js { render js: "loadContent('/posts')" }
     end
   end
+
+  private
+
+    def signed_in_user
+      redirect_to root_path unless signed_in?
+    end
 end
