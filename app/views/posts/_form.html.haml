@@ -1,0 +1,12 @@
+= form_for @post, remote: true, html: {class: 'form-horizontal', id: 'post_form'} do |f|
+  %fieldset
+    .control-group
+      .controls
+        = f.text_field :title, placeholder: "Title...", class: 'input-xxlarge'
+    .control-group
+      .controls
+        = f.text_area :content, rows: 5, placeholder: "Post...", class: 'input-xxlarge'
+    .form-actions
+      = f.file_field :picture
+    .form-actions
+      = f.submit id: "post_submit"

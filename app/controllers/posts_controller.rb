@@ -6,7 +6,7 @@ before_filter :signed_in_user, :except => :index
     @posts = Post.all
 
     respond_to do |format|
-      format.html # index.html.erb
+      format.html # index.html.haml
       format.js { render js: "loadContent('/posts')" }
     end
   end
@@ -15,7 +15,7 @@ before_filter :signed_in_user, :except => :index
     @post = Post.find(params[:id])
 
     respond_to do |format|
-      format.html # show.html.erb
+      format.html # show.html.haml
       format.js { render js: "loadContent('/posts/#{@post.id}')" }
     end
   end
@@ -24,7 +24,7 @@ before_filter :signed_in_user, :except => :index
     @post = Post.new
 
     respond_to do |format|
-      format.html # new.html.erb
+      format.html # new.html.haml
       format.js { render js: "loadContent('/posts/new')" }
     end
   end

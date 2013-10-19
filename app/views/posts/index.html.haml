@@ -1,0 +1,12 @@
+- if signed_in?
+  = link_to 'New Post', new_post_path, remote: true
+  %br/
+  %br/
+- @posts.each do |post|
+  = render 'onepost', :post => post
+  - if signed_in?
+    %p
+      = link_to 'Show', post, remote: true
+      = link_to 'Edit', edit_post_path(post), remote: true
+      = link_to 'Destroy', post, confirm: 'Are you sure?', method: :delete, remote: true
+  %br/

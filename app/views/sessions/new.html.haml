@@ -1,0 +1,13 @@
+= form_for(:session, url: sessions_path) do |f|
+  %fieldset
+    .control-group
+      .controls
+        = f.text_field :name, :placeholder => "Name...", :class => "input-large"
+    .control-group
+      .controls
+        = f.password_field :password, :placeholder => "Password...", :class => "input-large"
+    .form-actions
+      = f.submit "Sign In", id: "signin_submit"
+
+
+

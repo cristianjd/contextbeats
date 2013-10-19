@@ -1,0 +1,12 @@
+= form_for([post, post.comments.build], :html => {:class => "form-inline comment_form"}, :validate => true, :remote => true) do |f|
+  %fieldset.comment_fieldset
+    .control-group
+      .controls
+        = f.text_field :commenter, :placeholder => "Name...", :class => 'input-medium comment_commenter'
+    .control-group
+      .controls
+        = f.text_field :body, :placeholder => "Comment...", :class => 'input-xlarge comment_body'
+    .form-actions.comment_div
+      = f.submit "Submit", class: "comment_submit"
+%div
+  %h4.errors_2

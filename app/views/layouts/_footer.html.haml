@@ -1,0 +1,6 @@
+%footer
+  %small
+    &copy; 2013 Context
+    #login
+      - if signed_in?
+        = link_to "Sign Out", signout_path, method: "delete"

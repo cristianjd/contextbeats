@@ -1,0 +1,17 @@
+= image_tag(post.picture.url(:medium), :class => "post_pic") if post.picture?
+%h4= post.title
+%p.time
+  =  post.created_at.strftime("%B %d %Y, %I:%M %p")
+%p
+  = raw(post.content)
+- postid = "post-#{post.id}"
+%div{ :id => "#{postid}"}
+  %a.comment_link{ :href => "#" }
+    %h6
+      Comments (<span class="comment_count">#{post.comments.count}</span>)
+  .comment_container{ :style => "display: none;" }
+    .comment_wrap= render post.comments
+    %h6
+      Add a comment:
+    = render "comments/form", :post => post
+%br/

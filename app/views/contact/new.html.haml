@@ -1,0 +1,20 @@
+%p#contact_par Use the form below to contact Context. If inquiring about a beat, please include its name in the subject.
+= form_for @message, :html => {:class => 'form-horizontal', :id => 'contact_form'}, :validate => true, :remote => true, :url => contact_path do |form|
+  %div
+    %h4#errors
+    %br/
+    %fieldset
+      .control-group
+        .controls
+          = form.text_field :name, :placeholder => "Type in your name...", :class => 'input-xxlarge'
+      .control-group
+        .controls
+          = form.text_field :email, :placeholder => "Type in your email address...", :class => 'input-xxlarge'
+      .control-group
+        .controls
+          = form.text_field :subject, :placeholder => "Type in the subject of your message...", :class => 'input-xxlarge'
+      .control-group
+        .controls
+          = form.text_area :body, :rows => 10, :placeholder => "Type in your message...", :class => 'input-xxlarge'
+      .form-actions
+        = form.submit "Send", id: "contact_submit"
