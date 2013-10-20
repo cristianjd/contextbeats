@@ -4,6 +4,13 @@ $blue-color: #0088cc;
 $gray-color: #a0a0a0;
 $main-color: #272727;
 
+@mixin button_style {
+  background:none!important;
+  border:none;
+  padding:0!important;
+  color: $blue-color;
+}
+
 /* universal */
 
 * {
@@ -211,10 +218,7 @@ a:focus {
 /* Contact */
 
 #contact_submit {
-  background:none!important;
-  border:none;
-  padding:0!important;
-  color: $blue-color;
+  @include button_style;
   font-size: 2em;
   margin-left: 60px;
   margin-top: -30px;
@@ -328,10 +332,7 @@ form.form-inline div.control-group {
 }
 
 .comment_submit {
-  background:none!important;
-  border:none;
-  padding:0!important;
-  color: $blue-color;
+  @include button_style;
   font-size: 1em;
   margin-left: 8px;
 }
@@ -368,7 +369,8 @@ form.form-inline div.control-group {
 }
 
 #post_submit {
-  margin-top: -10px;
+  margin-top: -14px;
+  @include button_style;
 }
 
 .post_pic {
@@ -379,13 +381,15 @@ form.form-inline div.control-group {
   margin-right: 16px;
 }
 
+.form-actions {
+  height: 8px;
+  margin-top: 0px;
+}
+
 /* Sessions */
 
 #signin_submit {
-  background:none!important;
-  border:none;
-  padding:0!important;
-  color: $blue-color;
+  @include button_style;
   font-size: 1.5em;
   margin-left: 58px;
   margin-top: -50px;
