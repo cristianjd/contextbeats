@@ -29,6 +29,10 @@ textarea {
   resize: vertical;
 }
 
+a:hover {
+  color: white;
+}
+
 .center {
   text-align: center;
 }
@@ -369,6 +373,10 @@ form.form-inline div.control-group {
 
 .post_pic {
   margin-left: auto;
+}
+
+.post_links a {
+  margin-right: 16px;
 }
 
 /* Sessions */

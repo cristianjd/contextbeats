@@ -1,4 +1,5 @@
 - post = @post
 = render 'onepost', :post => post
-= link_to 'Edit', edit_post_path(@post), remote: true
-= link_to 'Back', posts_path, remote: true
+%p.post_links
+  = link_to 'Edit', edit_post_path(@post), remote: true
+  = link_to 'Back', posts_path, remote: true
