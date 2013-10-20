@@ -1,7 +1,7 @@
 = image_tag(post.picture.url(:medium), :class => "post_pic") if post.picture?
 %h4= post.title
 %p.time
-  =  post.created_at.strftime("%B %d %Y, %I:%M %p")
+  =  formatted_time(post)
 %p
   = raw(post.content)
 - postid = "post-#{post.id}"
