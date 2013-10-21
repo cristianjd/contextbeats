@@ -14,9 +14,9 @@ describe "PostPages" do
 
     describe "index page" do
       it { should_not have_link 'New Post'}
-      it { should_not have_link 'Show' }
+      it { should_not have_link 'View' }
       it { should_not have_link 'Edit' }
-      it { should_not have_link 'Destroy' }
+      it { should_not have_link 'Delete' }
       it { find('.comment_submit').should_not be_visible }
 
       describe "comments" do
@@ -27,7 +27,8 @@ describe "PostPages" do
         describe "comment errors", :js => true do
           describe "name left blank" do
             before do
-              click_on 'Submit'
+              sleep 5
+              find('.comment_submit').click
             end
             it { should have_content 'Name can not be blank.' }
             it "should not increment comments" do
@@ -36,8 +37,9 @@ describe "PostPages" do
           end
           describe 'body left blank' do
             before do
+              sleep 5
               find('.comment_commenter').set "Lorem Ipsum"
-              click_on 'Submit'
+              find('.comment_submit').click
             end
             it { should have_content 'Comment can not be blank.' }
             it "should not increment comments" do
@@ -105,9 +107,9 @@ describe "PostPages" do
 
     describe "index page" do
       it { should have_link 'New Post'}
-      it { should have_link 'Show' }
+      it { should have_link 'View' }
       it { should have_link 'Edit' }
-      it { should have_link 'Destroy' }
+      it { should have_link 'Delete' }
 
       describe "comments" do
         before { click_on 'Comments (1)' }
@@ -119,7 +121,7 @@ describe "PostPages" do
     end
 
     describe "show page" do
-      before { click_on 'Show' }
+      before { click_on 'View' }
       it { should have_link 'Edit' }
       it { should have_link 'Back' }
     end
@@ -158,7 +160,7 @@ describe "PostPages" do
 
     describe "delete post" do
       it "should decrement post count" do
-        click_link 'Destroy'
+        click_link 'Delete'
         expect(Post.count).to eq(0)
         expect(page).to_not have_content 'Lorem Ipsum'
       end
