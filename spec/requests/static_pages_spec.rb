@@ -6,7 +6,7 @@ describe "Static Pages" do
   before { visit root_path }
 
   describe "Home page" do
-    it { should have_content('Welcome') }
+    it { should have_content('Context') }
   end
 
   describe "News page" do
