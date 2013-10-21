@@ -6,6 +6,9 @@
     = javascript_include_tag "application"
     = csrf_meta_tags
     = favicon_link_tag
+    /[if IE]
+      %script
+        alert('Unfortunately this site is not compatible with your current browser. Please use a different one and try again');
   %body
     #container
       = render 'layouts/header'
