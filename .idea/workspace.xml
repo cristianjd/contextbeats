@@ -7,7 +7,7 @@
     </list>
     <ignored path="context.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="6704be5d-faa0-453a-b42c-d2d6c42219bf" time="1382386492699" ignored="false" />
+    <file path="/Dummy.txt" changelist="6704be5d-faa0-453a-b42c-d2d6c42219bf" time="1382389574716" ignored="false" />
     <file path="/custom.css.scss" changelist="6704be5d-faa0-453a-b42c-d2d6c42219bf" time="1379709182313" ignored="false" />
     <file path="/home.html.erb" changelist="6704be5d-faa0-453a-b42c-d2d6c42219bf" time="1379710109403" ignored="false" />
     <file path="/news.html.erb" changelist="6704be5d-faa0-453a-b42c-d2d6c42219bf" time="1369812631664" ignored="false" />
@@ -67,7 +67,7 @@
     <file path="/ie.html.haml" changelist="6704be5d-faa0-453a-b42c-d2d6c42219bf" time="1382316074584" ignored="false" />
     <file path="/home.html.haml" changelist="6704be5d-faa0-453a-b42c-d2d6c42219bf" time="1382380834531" ignored="false" />
     <file path="/about.html.haml" changelist="6704be5d-faa0-453a-b42c-d2d6c42219bf" time="1382385475512" ignored="false" />
-    <file path="/README.md" changelist="6704be5d-faa0-453a-b42c-d2d6c42219bf" time="1382389562465" ignored="false" />
+    <file path="/README.md" changelist="6704be5d-faa0-453a-b42c-d2d6c42219bf" time="1382390075677" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,7 +135,7 @@
       <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="46" selection-start="426" selection-end="426" vertical-scroll-proportion="0.18195719">
+            <state line="7" column="30" selection-start="408" selection-end="408" vertical-scroll-proportion="0.18195719">
               <folding />
             </state>
           </provider>
@@ -831,7 +831,11 @@
       <created>1382386498512</created>
       <updated>1382386498512</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Readme&#10;&#10;&#10;">
+      <created>1382389578985</created>
+      <updated>1382389578985</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TodoView" selected-index="1">
@@ -1064,7 +1068,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="46" selection-start="426" selection-end="426" vertical-scroll-proportion="0.18195719">
+        <state line="7" column="30" selection-start="408" selection-end="408" vertical-scroll-proportion="0.18195719">
           <folding />
         </state>
       </provider>
