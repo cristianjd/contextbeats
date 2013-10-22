@@ -6,4 +6,5 @@ One page Rails application that serves as my personal music pages. Features incl
 - Signed in users can create, edit, and delete posts. Anyone can add a comment. Signed in users can delete them.
 - Contact page that uses ActionMailer to send an email upon submission.
 
- The app is deployed to Heroku and can be found at [www.contextbeats.com](http://www.contextbeats.com).
+
+The app is deployed to Heroku and can be found at [www.contextbeats.com](http://www.contextbeats.com).
