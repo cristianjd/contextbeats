@@ -1,6 +1,6 @@
 # Description
 
-One page Rails application that serves as my personal music pages. Features include:
+One page Rails application that serves as my personal music page. Features include:
 - Music player that streams audio and pulls info from SoundCloud using SoundCloud's JavaScript API and [Custom Music Player](https://github.com/soundcloud/soundcloud-custom-player).
 - News page that has blog posts. Posts can interpret raw HTML and can have an attached image though [Paperclip](https://github.com/thoughtbot/paperclip) and AWS.
 - Signed in users can create, edit, and delete posts. Anyone can add a comment. Signed in users can delete them.

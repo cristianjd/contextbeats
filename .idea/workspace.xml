@@ -7,7 +7,7 @@
     </list>
     <ignored path="context.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="6704be5d-faa0-453a-b42c-d2d6c42219bf" time="1382423638421" ignored="false" />
+    <file path="/Dummy.txt" changelist="6704be5d-faa0-453a-b42c-d2d6c42219bf" time="1382423715579" ignored="false" />
     <file path="/custom.css.scss" changelist="6704be5d-faa0-453a-b42c-d2d6c42219bf" time="1379709182313" ignored="false" />
     <file path="/home.html.erb" changelist="6704be5d-faa0-453a-b42c-d2d6c42219bf" time="1379710109403" ignored="false" />
     <file path="/news.html.erb" changelist="6704be5d-faa0-453a-b42c-d2d6c42219bf" time="1369812631664" ignored="false" />
@@ -126,7 +126,7 @@
       <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="0" selection-start="631" selection-end="631" vertical-scroll-proportion="0.24170616">
+            <state line="9" column="101" selection-start="731" selection-end="731" vertical-scroll-proportion="0.24170616">
               <folding />
             </state>
           </provider>
@@ -938,7 +938,11 @@
       <created>1382423642578</created>
       <updated>1382423642578</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="Readme&#10;&#10;&#10;">
+      <created>1382423719480</created>
+      <updated>1382423719480</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TodoView" selected-index="1">
@@ -1180,7 +1184,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="631" selection-end="631" vertical-scroll-proportion="0.24170616">
+        <state line="9" column="101" selection-start="731" selection-end="731" vertical-scroll-proportion="0.24170616">
           <folding />
         </state>
       </provider>
