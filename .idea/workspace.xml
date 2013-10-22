@@ -3,12 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="6704be5d-faa0-453a-b42c-d2d6c42219bf" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/log/development.log" afterPath="$PROJECT_DIR$/log/development.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="context.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="6704be5d-faa0-453a-b42c-d2d6c42219bf" time="1382397783889" ignored="false" />
+    <file path="/Dummy.txt" changelist="6704be5d-faa0-453a-b42c-d2d6c42219bf" time="1382422894698" ignored="false" />
     <file path="/custom.css.scss" changelist="6704be5d-faa0-453a-b42c-d2d6c42219bf" time="1379709182313" ignored="false" />
     <file path="/home.html.erb" changelist="6704be5d-faa0-453a-b42c-d2d6c42219bf" time="1379710109403" ignored="false" />
     <file path="/news.html.erb" changelist="6704be5d-faa0-453a-b42c-d2d6c42219bf" time="1369812631664" ignored="false" />
@@ -68,7 +67,7 @@
     <file path="/ie.html.haml" changelist="6704be5d-faa0-453a-b42c-d2d6c42219bf" time="1382316074584" ignored="false" />
     <file path="/home.html.haml" changelist="6704be5d-faa0-453a-b42c-d2d6c42219bf" time="1382380834531" ignored="false" />
     <file path="/about.html.haml" changelist="6704be5d-faa0-453a-b42c-d2d6c42219bf" time="1382385475512" ignored="false" />
-    <file path="/README.md" changelist="6704be5d-faa0-453a-b42c-d2d6c42219bf" time="1382412822684" ignored="false" />
+    <file path="/README.md" changelist="6704be5d-faa0-453a-b42c-d2d6c42219bf" time="1382423633817" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +126,7 @@
       <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="104" selection-start="733" selection-end="733" vertical-scroll-proportion="0.21484992">
+            <state line="3" column="118" selection-start="218" selection-end="218" vertical-scroll-proportion="0.08056872">
               <folding />
             </state>
           </provider>
@@ -931,7 +930,11 @@
       <created>1382397789863</created>
       <updated>1382397789863</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Readme&#10;&#10;&#10;">
+      <created>1382422911631</created>
+      <updated>1382422911631</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TodoView" selected-index="1">
@@ -1020,7 +1023,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated gemfile&#10;&#10;&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Readme&#10;&#10;&#10;" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -1057,8 +1060,8 @@
     <MESSAGE value="alert if using ie&#10;" />
     <MESSAGE value="fixed specs&#10;&#10;" />
     <MESSAGE value="home and about pages&#10;&#10;" />
-    <MESSAGE value="Readme&#10;&#10;&#10;" />
     <MESSAGE value="updated gemfile&#10;&#10;&#10;" />
+    <MESSAGE value="Readme&#10;&#10;&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1173,7 +1176,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="104" selection-start="733" selection-end="733" vertical-scroll-proportion="0.21484992">
+        <state line="3" column="118" selection-start="218" selection-end="218" vertical-scroll-proportion="0.08056872">
           <folding />
         </state>
       </provider>
