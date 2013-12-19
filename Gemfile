@@ -31,6 +31,7 @@ gem 'jquery-migrate-rails'
 gem 'paperclip'
 gem 'aws-sdk'
 gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'figaro'
 
 
 group :development, :test do

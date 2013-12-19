@@ -1,7 +1,7 @@
 class ContactMailer < ActionMailer::Base
 
-  default :from => "cristian.j.derr@gmail.com"
-  default :to => "contextbeats@gmail.com"
+  default :from => ENV['GMAIL_USER_NAME']
+  default :to => ENV['GMAIL_USER_NAME']
 
   def new_message(message)
     @message = message
